@@ -15,7 +15,7 @@ class Op: public Base{
         double evaluate() { return num; }
         std::string stringify() {
 	 return to_string(num); }
-	int number_of_children(){return 1;}
+	int number_of_children(){return 0;}
 	Base* get_child(int i) { return NULL; }
 };
 

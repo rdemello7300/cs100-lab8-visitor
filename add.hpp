@@ -13,7 +13,11 @@ class Add : public Base {
         virtual std::string stringify() { return "("+ num1 -> stringify()+ " + "+ num2 -> stringify()+")"; }
         int number_of_children()
         {
-            return num1 -> number_of_children() + num2 -> number_of_children();
+            int left = num1 -> number_of_children();
+            int right = num2 -> number_of_children();
+            if(left == 0 )left++;
+            if(right == 0) right++;
+            return left + right;
         }
         Base* get_child(int i)
         {
