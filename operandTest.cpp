@@ -43,7 +43,7 @@ TEST(numChild3, One__Child_Using_Add)
 {
    Base* num1 = new Op(2);
 
-   EXPECT_EQ(num1 -> number_of_children(), 1);
+   EXPECT_EQ(num1 -> number_of_children(), 0);
 
 }
 
