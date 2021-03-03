@@ -4,6 +4,7 @@
 #include "add.hpp"
 #include "sub.hpp"
 #include "pow.hpp"
+#include "rand.hpp"
 #include "div.hpp"
 #include <stdio.h>
 #include <iostream>

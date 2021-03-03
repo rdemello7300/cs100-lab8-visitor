@@ -14,11 +14,7 @@ class Pow : public Base {
         std::string stringify() { return "(" + num1 -> stringify() + " ** " + num2 -> stringify() + ")"; }
         int number_of_children()
         {
-            int left = num1 -> number_of_children();
-            int right = num2 -> number_of_children();
-            if(left == 0 )left++;
-            if(right == 0) right++;
-            return left + right;
+            return 2;
         }
         Base* get_child(int i)
         {
