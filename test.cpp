@@ -12,6 +12,9 @@
 #include "iterator.hpp"
 #include "latexTest.hpp"
 #include "operandTest.cpp"
+#include "visitor.hpp"
+#include "mathml.cpp"
+#include "MathmlTest.cpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
