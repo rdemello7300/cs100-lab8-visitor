@@ -1,11 +1,11 @@
 #ifndef OP_HPP
 #define OP_HPP
+
 #include "base.hpp"
+#include "visitor.hpp"
 #include <string>
 #include <iostream>
 #include <stdio.h>
-#include "visitor.hpp"
-using namespace std;
 
 class Op: public Base{
    private:
@@ -15,7 +15,7 @@ class Op: public Base{
 	Op(double value) : num(value) { }
         double evaluate() { return num; }
         std::string stringify() {
-	 return to_string(num); }
+	 return std::to_string(num); }
 	int number_of_children(){return 0;}
 	Base* get_child(int i) { return NULL; }
     void accept(Visitor* visitor, int index)
