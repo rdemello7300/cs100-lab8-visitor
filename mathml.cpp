@@ -15,7 +15,7 @@
 class Mathml: public Visitor
 {
     protected:
-        string str = "<math>\n  <apply>";
+        std::string str = "<math>\n  <apply>";
         int num = 1;
         
     public:
@@ -172,7 +172,7 @@ class Mathml: public Visitor
         str += "</apply>";
     }
     
-    string PrintMath(Base* base)
+    std::string PrintMath(Base* base)
     {
         return str + "\n  </apply>\n</math>";
     }

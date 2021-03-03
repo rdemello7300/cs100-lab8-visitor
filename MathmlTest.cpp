@@ -1,16 +1,17 @@
+#include "gtest/gtest.h"
+#include "base.hpp"
+#include "op.hpp"
+#include "mult.hpp"
+#include "add.hpp"
+#include "sub.hpp"
+#include "pow.hpp"
+#include "rand.hpp"
+#include "div.hpp"
 #include <stdio.h>
 #include <iostream>
 #include "iterator.hpp"
-#include "op.hpp"
-#include "add.hpp"
-#include "mult.hpp"
-#include "sub.hpp"
-#include "div.hpp"
-#include "pow.hpp"
 #include "visitor.hpp"
 #include "mathml.cpp"
-#include "rand.hpp"
-#include "iterator.cpp"
 
 using namespace std;
 
@@ -73,3 +74,7 @@ TEST(MathML3, One_op)
    EXPECT_EQ(math.PrintMath(four), tempStr);
 }
 
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
