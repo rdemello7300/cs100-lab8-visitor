@@ -31,6 +31,11 @@ TEST(MathML1, Math_two_op_Add)
     }
    string testString = "<math>\n  <apply>\n    <plus/>\n    <cn>2.000000<cn>\n    <cn>3.000000<cn>\n  </apply>\n  </apply>\n</math>";
    EXPECT_EQ(math.PrintMath(test), testString);
+
+   delete num1;
+   delete num2;
+   delete test;
+   delete ater;
 }
 
 TEST(MathML2, Multiple_ops)
@@ -56,6 +61,15 @@ TEST(MathML2, Multiple_ops)
 
     string tempStr = "<math>\n  <apply>\n    <divide/>\n      <plus/>\n        <times/>\n        <cn>4.000000<cn>\n        <cn>3.000000<cn>\n      </apply>\n        <cn>2.000000<cn>\n      </apply>\n        <cn>5.000000<cn>\n      </apply>\n  </apply>\n</math>";
     EXPECT_EQ(math.PrintMath(divi), tempStr);
+
+    delete four;
+    delete five;
+    delete two;
+    delete three;
+    delete multi;
+    delete addi1;
+    delete divi;
+    delete ater;
 }
 
 TEST(MathML3, One_op)
@@ -72,6 +86,9 @@ TEST(MathML3, One_op)
 
    string tempStr = "<math>\n  <apply>\n  <cn>4.000000<cn>\n  </apply>\n</math>";
    EXPECT_EQ(math.PrintMath(four), tempStr);
+
+   delete four;
+   delete ater;
 }
 
 int main(int argc, char **argv) {

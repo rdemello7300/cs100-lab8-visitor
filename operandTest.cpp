@@ -26,6 +26,9 @@ TEST(numChild1, Two_Child_Using_Add)
    Add* test = new Add(num1, num2);
    EXPECT_EQ(test -> number_of_children(), 2); 
 
+   delete num1;
+   delete num2;
+   delete test;
 }
 
 TEST(numChild2, Four_children)
@@ -42,6 +45,13 @@ TEST(numChild2, Four_children)
    EXPECT_EQ(div -> number_of_children(), 2);
    EXPECT_EQ(div -> evaluate(), 4);
 
+   delete num1;
+   delete num2;
+   delete num3;
+   delete num4;
+   delete test;
+   delete mult;
+   delete div;
 }
 
 TEST(numChild3, One__Child_Using_Add)
@@ -50,6 +60,7 @@ TEST(numChild3, One__Child_Using_Add)
 
    EXPECT_EQ(num1 -> number_of_children(), 0);
 
+   delete num1;
 }
 
 TEST(GetChild1, Two_child_Return_Left)
@@ -60,6 +71,9 @@ TEST(GetChild1, Two_child_Return_Left)
    Add* test = new Add(num1, num2);
    EXPECT_EQ(test -> get_child(0) -> evaluate(), 2);
 
+   delete num1;
+   delete num2;
+   delete test;
 }
 
 TEST(GetChild2, Two_child_Return_Right)
@@ -70,6 +84,9 @@ TEST(GetChild2, Two_child_Return_Right)
    Add* test = new Add(num1, num2);
    EXPECT_EQ(test -> get_child(1) -> evaluate(), 3);
 
+   delete num1;
+   delete num2;
+   delete test;
 }
 
 TEST(randTest, No_Child)
@@ -78,6 +95,7 @@ TEST(randTest, No_Child)
 
    EXPECT_EQ(num1 -> number_of_children(), 0);
 
+   delete num1;
 }
 
 int main(int argc, char **argv) {
