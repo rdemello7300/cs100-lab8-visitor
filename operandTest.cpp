@@ -1,16 +1,20 @@
 #ifndef ___operandTest___
 #define ___operandTest___
 
-#include <iostream>
+#include "gtest/gtest.h"
 #include "base.hpp"
+#include "op.hpp"
+#include "mult.hpp"
 #include "add.hpp"
 #include "sub.hpp"
-#include "mult.hpp"
-#include "div.hpp"
 #include "pow.hpp"
 #include "rand.hpp"
-#include "op.hpp"
+#include "div.hpp"
+#include <stdio.h>
+#include <iostream>
 #include "iterator.hpp"
+#include "operandTest.cpp"
+#include "visitor.hpp"
 
 using namespace std;
 
@@ -76,5 +80,9 @@ TEST(randTest, No_Child)
 
 }
 
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
 
 #endif
