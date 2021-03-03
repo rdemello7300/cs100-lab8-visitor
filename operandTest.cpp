@@ -8,6 +8,7 @@
 #include "mult.hpp"
 #include "div.hpp"
 #include "pow.hpp"
+#include "rand.hpp"
 #include "op.hpp"
 #include "iterator.hpp"
 
@@ -34,7 +35,7 @@ TEST(numChild2, Four_children)
    Mult* mult = new Mult(test, num3);
    Div* div = new Div(mult, num4);
 
-   EXPECT_EQ(div -> number_of_children(), 4);
+   EXPECT_EQ(div -> number_of_children(), 2);
    EXPECT_EQ(div -> evaluate(), 4);
 
 }
@@ -64,6 +65,14 @@ TEST(GetChild2, Two_child_Return_Right)
 
    Add* test = new Add(num1, num2);
    EXPECT_EQ(test -> get_child(1) -> evaluate(), 3);
+
+}
+
+TEST(randTest, No_Child)
+{
+   Base* num1 = new Rand();
+
+   EXPECT_EQ(num1 -> number_of_children(), 0);
 
 }
 
