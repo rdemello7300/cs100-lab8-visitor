@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <stdio.h>
+#include "visitor.hpp"
 using namespace std;
 
 class Op: public Base{
