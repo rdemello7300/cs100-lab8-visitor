@@ -59,7 +59,7 @@ TEST(MathML2, Multiple_ops)
             ater -> next();
     }
 
-    string tempStr = "<math>\n  <apply>\n    <divide/>\n      <plus/>\n        <times/>\n        <cn>4.000000</cn>\n        <cn>3.000000</cn>\n      </apply>\n        <cn>2.000000<cn>\n      </apply>\n        <cn>5.000000<cn>\n      </apply>\n  </apply>\n</math>";
+    string tempStr = "<math>\n  <apply>\n    <divide/>\n      <plus/>\n        <times/>\n        <cn>4.000000</cn>\n        <cn>3.000000</cn>\n      </apply>\n        <cn>2.000000</cn>\n      </apply>\n        <cn>5.000000</cn>\n      </apply>\n  </apply>\n</math>";
     EXPECT_EQ(math.PrintMath(divi), tempStr);
 
     delete four;
