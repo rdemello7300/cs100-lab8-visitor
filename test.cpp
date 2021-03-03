@@ -1,4 +1,5 @@
 #include "gtest/gtest.h"
+#include "base.hpp"
 #include "op.hpp"
 #include "mult.hpp"
 #include "add.hpp"
@@ -9,8 +10,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "iterator.hpp"
+#include "latexTest.hpp"
 #include "operandTest.cpp"
-using namespace std;
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
