@@ -1,15 +1,15 @@
-#ifndef __LATEXTEST_HPP__
-#define __LATEXTEST_HPP__
-
-#include <iostream>
+#include "gtest/gtest.h"
 #include "base.hpp"
+#include "op.hpp"
+#include "mult.hpp"
 #include "add.hpp"
 #include "sub.hpp"
-#include "mult.hpp"
-#include "div.hpp"
 #include "pow.hpp"
 #include "rand.hpp"
-#include "op.hpp"
+#include "div.hpp"
+#include <stdio.h>
+#include <iostream>
+#include "iterator.hpp"
 #include "visitorLatex.hpp"
 
 using namespace std;
@@ -140,4 +140,7 @@ TEST(LaTeX, test5)
     EXPECT_EQ(v.PrintLaTeX(div), "${\\frac{({2.000000}\\cdot{5.000000})}{({5.000000}^{2.000000})}}$");
 }
 
-#endif
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
