@@ -29,7 +29,7 @@ class Mathml: public Visitor
             str+= "  ";
             temp--;
         }
-        str += "<cn>" + node -> stringify() + "<cn>";
+        str += "<cn>" + node -> stringify() + "</cn>";
     }
     
     void visit_rand(Rand* node){
@@ -40,7 +40,7 @@ class Mathml: public Visitor
             str+= "  ";
             temp--;
         }
-        str += "<cn>" + node -> stringify() + "<cn>";
+        str += "<cn>" + node -> stringify() + "</cn>";
     }
     
     void visit_add_begin (Add * node){
