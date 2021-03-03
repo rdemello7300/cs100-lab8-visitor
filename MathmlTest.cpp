@@ -29,8 +29,11 @@ TEST(MathML1, Math_two_op_Add)
             ater -> current_node() -> accept(&math, ater -> current_index());
             ater -> next();
     }
+
    string testString = "<math>\n  <apply>\n    <plus/>\n    <cn>2.000000</cn>\n    <cn>3.000000</cn>\n  </apply>\n  </apply>\n</math>";
    EXPECT_EQ(math.PrintMath(test), testString);
+
+   cout << math.PrintMath(test) << endl;
 
    delete num1;
    delete num2;
@@ -62,6 +65,8 @@ TEST(MathML2, Multiple_ops)
     string tempStr = "<math>\n  <apply>\n    <divide/>\n      <plus/>\n        <times/>\n        <cn>4.000000</cn>\n        <cn>3.000000</cn>\n      </apply>\n        <cn>2.000000</cn>\n      </apply>\n        <cn>5.000000</cn>\n      </apply>\n  </apply>\n</math>";
     EXPECT_EQ(math.PrintMath(divi), tempStr);
 
+    cout << math.PrintMath(divi) << endl;
+
     delete four;
     delete five;
     delete two;
@@ -86,6 +91,8 @@ TEST(MathML3, One_op)
 
    string tempStr = "<math>\n  <apply>\n  <cn>4.000000</cn>\n  </apply>\n</math>";
    EXPECT_EQ(math.PrintMath(four), tempStr);
+
+   cout << math.PrintMath(four) << endl;
 
    delete four;
    delete ater;
