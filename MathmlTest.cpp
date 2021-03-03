@@ -29,7 +29,7 @@ TEST(MathML1, Math_two_op_Add)
             ater -> current_node() -> accept(&math, ater -> current_index());
             ater -> next();
     }
-   string testString = "<math>\n  <apply>\n    <plus/>\n    <cn>2.000000<cn>\n    <cn>3.000000<cn>\n  </apply>\n  </apply>\n</math>";
+   string testString = "<math>\n  <apply>\n    <plus/>\n    <cn>2.000000</cn>\n    <cn>3.000000</cn>\n  </apply>\n  </apply>\n</math>";
    EXPECT_EQ(math.PrintMath(test), testString);
 
    delete num1;
@@ -59,7 +59,7 @@ TEST(MathML2, Multiple_ops)
             ater -> next();
     }
 
-    string tempStr = "<math>\n  <apply>\n    <divide/>\n      <plus/>\n        <times/>\n        <cn>4.000000<cn>\n        <cn>3.000000<cn>\n      </apply>\n        <cn>2.000000<cn>\n      </apply>\n        <cn>5.000000<cn>\n      </apply>\n  </apply>\n</math>";
+    string tempStr = "<math>\n  <apply>\n    <divide/>\n      <plus/>\n        <times/>\n        <cn>4.000000</cn>\n        <cn>3.000000</cn>\n      </apply>\n        <cn>2.000000<cn>\n      </apply>\n        <cn>5.000000<cn>\n      </apply>\n  </apply>\n</math>";
     EXPECT_EQ(math.PrintMath(divi), tempStr);
 
     delete four;
@@ -84,7 +84,7 @@ TEST(MathML3, One_op)
             ater -> next();
     }
 
-   string tempStr = "<math>\n  <apply>\n  <cn>4.000000<cn>\n  </apply>\n</math>";
+   string tempStr = "<math>\n  <apply>\n  <cn>4.000000</cn>\n  </apply>\n</math>";
    EXPECT_EQ(math.PrintMath(four), tempStr);
 
    delete four;
