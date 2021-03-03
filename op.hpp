@@ -17,6 +17,10 @@ class Op: public Base{
 	 return to_string(num); }
 	int number_of_children(){return 0;}
 	Base* get_child(int i) { return NULL; }
+    void accept(Visitor* visitor, int index)
+    {
+        visitor -> visit_op(this);
+    }
 };
 
 #endif //OP_HPP
